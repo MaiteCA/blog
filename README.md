@@ -8,7 +8,7 @@ Configurer Apache :
 Il y a un petit fichier .htaccess qui est utilisé pour faire d' l'URL forwarding (c'est à dire qu'au lieu d'avoir des adresses du genre _/index.php?page=post?id=3_ on a _/post-3_
 C'est plus joli, mais ça nécessite d'activer le module rewrite\_module de Apache. Dans WAMP : menu "Apache" -> Apache modules -> cocher rewrite\_module (il faut défiler un peu pour le trouver).
 
-Version de PHP Apache :
+Version de PHP :
 -----------------------
 Il faudra php 5.4 au minimum pour que le script fonctionne, surtout à cause de la syntaxe raccourcie pour les tableaux.
 
