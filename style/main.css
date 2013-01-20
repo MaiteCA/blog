@@ -1,0 +1,234 @@
+html{
+    background : url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/creampaper.png);;
+    padding: 0;
+    margin: 0;
+    background: #e9e9e9;
+}
+
+body{
+    padding: 10px;
+    margin: 0;
+    font-family: calibri,verdana,Geneva,Kalimati,sans-serif;
+    font-size: 15px;
+    padding : 0 10px 40px;
+    width:960px;
+    margin: 10px auto;
+    color : #333;
+    min-height : 500px;
+    background-color: #fff;
+    box-shadow: #999 0px 1px 3px;
+}
+
+h1 {
+    margin: 0;
+}
+
+h1 a, h1 a:hover, h1 a:active, h1 a:visited{
+    color : #333;
+    text-decoration: none;
+}
+
+article h2 {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+article h3 {
+    font-size: 16px;
+}
+
+header{
+    height: 200px;
+}
+
+a {
+    color : #66f;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+input, textarea {
+    transition:  box-shadow 0.5s ease;
+    padding: 2px;
+    border: 1px solid #999;
+    border-radius: 2px;
+}
+input:focus, textarea:focus{
+    box-shadow : 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 6px rgba(82, 168, 236, 0.6);
+    border-color : rgba(82, 168, 236, 0.8)
+}
+
+#sidebar {
+    float: right;
+    width:280px;
+    text-align: left;
+    font-size : 12px;
+}
+
+#sidebar a{
+    color: black;
+}
+
+.twitter, .rss, .googleplus{
+    display: block;
+    text-align: center;
+    margin : 8px 0;
+    border-radius: 3px;
+    width: 260px;
+    border: 1px solid;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 28px;
+    background: url(img/social.png) no-repeat left;
+}
+
+.rss{
+    background-position: 0px -56px;
+    background-color: #fdf6e7;
+    border-color : #795d1a;
+}
+
+.googleplus{
+    background-position: 0px -0px;
+    background-color: #f8ebeb;
+    border-color : #744747;
+}
+
+.twitter{
+    background-color: #e7eefd;
+    border-color : #333399;
+}
+
+article footer{
+    text-align: right;
+    font-size: 12px;
+}
+
+.content{
+    width: 600px;
+}
+
+article.content{
+    text-align: justify;
+    -moz-hyphens: auto;
+    width: 540px;
+    hyphens: auto;
+    margin-left : 80px
+}
+
+.comments {
+    margin-top : 20px;
+}
+
+#comment-form {
+    margin-bottom: 20px;
+}
+
+#comment-form input{
+    margin-bottom : 5px;
+}
+
+#comment-form textarea, #post-form textarea{
+    width : 534px;
+    padding : 2px;
+}
+
+#post-form textarea{
+    min-height: 400px;
+}
+
+#post-form input[type=text]{
+    width : 534px;
+}
+
+#post-form input[type=submit], #comment-form input[type=submit]{
+    float: right ;
+}
+
+.listposts{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.listposts tr:hover {
+    background: #eef;
+}
+
+/** Date **/
+time {
+    width: 55px;
+    margin-left : -80px;
+    margin-right : 10px;
+    position: relative;
+    float: left;
+    height: 54px;
+    font-family: Verdana;
+    color: #333;
+    border-right : 2px solid #fafafa;
+    background-color: #fff;
+    padding: 4px;
+}
+
+.day, .month, .year {
+    position: absolute;
+}
+
+.day {
+    font-size: 30px;
+    top: 0px;
+}
+
+.month {
+    top: 30px;
+    left: 5px;
+    font-size: 18px;
+    color: #666;
+}
+
+.year {
+    top: 18px;
+    right: -16px;
+    font-size: 16px;
+    rotation: -90deg !important;
+    color : #999;
+    font-weight: bold;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+}
+
+/** Code **/
+pre, code {
+    overflow-x: scroll !important;
+    padding-top: 20px;
+    position: relative;
+    width: 514px;
+    left : 0px;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+pre:hover {
+    width: 600px;
+    left : -86px;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+pre[title]:after{
+    color: #333;
+    font-size: 1.4em;
+    font-weight: bold;
+    transition:  opacity 0.5s ease;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+
+pre[title]:after{
+    content:attr(title);
+}
+
+pre[title]:hover:after{
+  opacity: 0;
+}
