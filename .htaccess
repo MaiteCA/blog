@@ -1,6 +1,14 @@
+#Active la redirection
 Options +FollowSymlinks
 RewriteEngine on
+
+#réécrit les URLS type /$page en /index.php?page=$page
+#exemple : /accueil devient /index.php?page=accueil
 RewriteRule ^([a-z_]+)$  ./index.php?page=$1 [QSA,L]
+
+#réécrit les URLS en /$page-$id en /index.php?page=$page&$id=id
+#exemple : /article-3 devient /index.php?page=article&id=3
 RewriteRule ^([a-z_]+)-([0-9]+)$  ./index.php?page=$1&id=$2 [L]
 
+#Envoit les fichiers en utf-8
 AddDefaultCharset UTF-8
