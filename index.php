@@ -27,3 +27,4 @@ if (isset($_GET['page']) && in_array($_GET['page'], $authorized_pages)) {
 
 // Appel au controller qui va générer les données à afficher :
 require("controllers/$page.php");
+echo memory_get_peak_usage()/1000;

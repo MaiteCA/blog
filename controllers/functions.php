@@ -5,13 +5,11 @@
  * @param  array $post Le post à mettre en forme (passé par référence)
  * @return array Le post mis en forme
  */
-function format_post($post){
+function format_post(&$post){
     $post['content']= format($post['content']);
     $post['year']   = substr($post['date'], 0,4);
     $post['month']  = utf8_encode(strftime("%b",strtotime($post['date'])));
     $post['day']    = substr($post['date'], 8,2);
-
-    return $post;
 }
 
 /**
@@ -19,16 +17,14 @@ function format_post($post){
  * @param  string $post Le texte à raccourcir
  * @return string Le texte raccourcis.
  */
-function shorten($text){
+function shorten(&$text){
     //On cherche la position d'une ligne qui commence par ===
     $length = strpos($text, "\n===");
 
     //Si on a trouvé (donc $length existe), on ne récupère que jusque là.
     if ($length){
-        $text = substr($text, 0, $length);
+        $post['content'] = substr($text, 0, $length);
     }
-
-    return $text;
 }
 
 /**
