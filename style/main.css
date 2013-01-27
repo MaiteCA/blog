@@ -225,12 +225,13 @@ pre:hover {
 }
 
 pre[title]:after{
+    font-family: calibri,verdana,Geneva,Kalimati,sans-serif;
     color: #333;
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: bold;
     transition:  opacity 0.5s ease;
     position: absolute;
-    right: 20px;
+    right: 5px;
     top: 0px;
 }
 

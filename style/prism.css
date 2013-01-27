@@ -60,15 +60,19 @@ pre[class*="language-"] {
 
 .token.property,
 .token.tag,
-.token.boolean,
+.token.keyword,
+.token.boolean {
+	color: #0000e6;
+}
+
 .token.number {
-	color: #905;
+    color: #f0f;
 }
 
 .token.selector,
 .token.attr-name,
 .token.string {
-	color: #690;
+	color: #ce7b00;
 }
 
 .token.operator,
@@ -82,8 +86,6 @@ pre[class*="language-"] {
 
 .token.atrule,
 .token.attr-value,
-.token.keyword,
-.token.function,
 .token.constant  {
 	color: #07a;
 }
@@ -93,9 +95,12 @@ pre[class*="language-"] {
 }
 
 .token.regex,
-.token.important,
-.token.variable {
+.token.important {
 	color: #e90;
+}
+
+.token.variable{
+	color:#6d3206;
 }
 
 .token.important {
