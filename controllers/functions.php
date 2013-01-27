@@ -54,3 +54,18 @@ function format($text) {
 
     return nl2br(preg_replace(array_keys($replace), $replace, $text),false);
 }
+
+/**
+ * Tronque une chaine de caractère
+ * @param  string  $string      La chaine de caractère à tronquer
+ * @param  int     $max_length  Longueure maximum de la chaine
+ * @param  string  $ellipsis    Caractères à utiliser pour l'ellipse ("...")
+ * @return string
+ */
+function truncate($string,$max_length,$ellipsis="..."){
+    if (strlen($string) > $max_length){
+        $max_length -= strlen($ellipsis);
+        $string = substr($string,0,$max_length).$ellipsis;
+    }
+    return $string;
+}
