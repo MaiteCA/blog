@@ -102,6 +102,7 @@ input:focus, textarea:focus{
 }
 
 .social{
+    padding: 20px 0;
     text-align: right;
 }
 
@@ -132,6 +133,15 @@ article.content{
 #comment-form textarea, #post-form textarea{
     width : 534px;
     padding : 2px;
+}
+
+.avatar {
+    float : left;
+    margin-left : -50px;
+}
+
+.comments article {
+    padding-left : 50px;
 }
 
 #post-form textarea{

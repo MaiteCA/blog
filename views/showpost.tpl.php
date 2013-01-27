@@ -21,15 +21,14 @@
             <textarea name=content placeholder="Commentaire (Vous pouvez écrire en *gras* ou en _italique_)" required></textarea>
             <input type=submit>
         </form>
-        <div>
 <?php foreach ($comments as $comment) { ?>
             <article>
+                <img class=avatar src='http://www.gravatar.com/avatar/<?=$comment['avatar_hash']?>?s=40&d=identicon' />
                 <div>
-                    <b><?= $comment['name'] ?> :</b>
-                    <p><?= $comment['content'] ?></p>
+                    <b><?=$comment['name']?> :</b>
+                    <?=$comment['content']?>
                 </div>
             </article>
 <?php } ?>
-        </div>
     </section>
 </article>
