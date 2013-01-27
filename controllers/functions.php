@@ -28,7 +28,7 @@ function shorten(&$text) {
 
     //Si on a trouvé (donc $length existe), on ne récupère que jusque là.
     if ($length) {
-        $post['content'] = substr($text, 0, $length);
+        $text = substr($text, 0, $length);
     }
 }
 
