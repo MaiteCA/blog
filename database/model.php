@@ -69,3 +69,26 @@ function add_comment($name, $content,$email, $post_id){
              VALUES (?,?,?,?)";
      return execute($req,[$name, $content, $email, $post_id]);
 }
+
+/** Retrouve le dégré d'habilitation */
+function get_clearance($login,$password) {
+    $req = "SELECT clearance
+            FROM user
+            WHERE name = ?
+            AND password = ?";
+    $res = execute($req, [$login,$password]);
+    return isset($res[0]) ? $res[0] : false;
+}
+
+function get_links($start= 0, $limit = 10) {
+     $req = "SELECT *
+             FROM link
+             LIMIT ? , ?";
+     return execute($req,[$start,$limit]);
+}
+
+function add_link($title, $url) {
+     $req = "INSERT INTO link
+     (title, url, date) VALUES (?,?,date())";
+     return execute($req,[$title, $url]);
+}

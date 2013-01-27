@@ -12,12 +12,14 @@
     </header>
     <div id=sidebar>
         <a href='admin'>Administration</a>
-
         <a class=rss href="rss.xml">Abonnez vous au flux RSS</a>
         <a class=twitter href="https://twitter.com/">Suivez nous sur Twitter</a>
         <a class=googleplus href="https://plus.google.com/">Suivez nous sur Google+</a>
     </div>
-    <?php require "views/"."$page.tpl.php"; ?>
+<?php for ($i = 0; isset($alert[$i]); $i++) { ?>
+    <div class="alert <?= $alert[$i]['type'] ?>"><?= $alert[$i]['message'] ?></div>
+<?php }
+require "views/"."$page.tpl.php"; ?>
 <script src="./js/prism.min.js"></script>
 <script src="./js/script.js"></script>
 </body>
