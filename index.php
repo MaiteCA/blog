@@ -54,5 +54,11 @@ if ($req_clearance > 0){
     }
 }
 
+
+$links = get_links();
+for ($i = 0; isset($links[$i]); $i++){
+    $links[$i]['date']  = substr($links[$i]['date'], 8,2)."/".substr($links[$i]['date'], 5,2);
+    $links[$i]['title'] = truncate($links[$i]['title'],100);
+}
 // Appel au controller qui va générer les données à afficher :
 require("controllers/$page.php");
