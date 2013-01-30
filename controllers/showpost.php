@@ -1,5 +1,7 @@
 <?php
-isset($_GET["id"]) ? $id = $_GET["id"] : $id = 0;
+if (!isset($id)) {
+    isset($_GET["id"]) ? $id = $_GET["id"] : $id = 0;
+}
 
 $post = get_post($id);          //On récupère le post avec l'id
 format_post($post);             //On le met en forme.

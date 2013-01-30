@@ -1,6 +1,7 @@
 Options +FollowSymlinks
 RewriteEngine on
-RewriteRule ^([a-z_]+)$  ./index.php?page=$1 [QSA,L]
-RewriteRule ^([a-z_]+)-([0-9]+)$  ./index.php?page=$1&id=$2 [L]
+RewriteRule ^([0-9])+[/-]?[a-z_]*$  ./index.php?page=showpost&id=$1 [QSA,L]
+RewriteRule ^([a-z_-]+)$  ./index.php?page=$1 [QSA,L]
+#RewriteRule ^([a-z_]+)-([0-9]+)$  ./index.php?page=$1&id=$2 [L]
 
 AddDefaultCharset UTF-8

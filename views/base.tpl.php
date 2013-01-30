@@ -11,8 +11,8 @@
         <div class="keyboard">
             <span class=fkey style="margin-right:8px;"></span><span class=fkey></span><span class=fkey></span><span class=fkey></span><span class=fkey style="margin-right:8px;"></span><span class=fkey id=f5></span><span class=fkey></span><span class=fkey></span><span class=fkey style="margin-right:8px;"></span><span class=fkey></span><span class=fkey></span><span class=fkey></span><span class=fkey></span><br><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span style="width:16px"></span><br><span style="width:16px"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><br><span style="width:22px"></span><span></span><span></span><span></span><span>.</span><span></span><span></span><span>.</span><span></span><span></span><span></span><span></span><span style="width:22px"></span><br><span style="width:30px"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span style="width:30px"></span><br><span id=ctrl style="width:20px"></span><span></span><span></span><span style="width:120px"></span><span></span><span></span><span></span>
         </div>
-        <h1><a href='./'>Mon blog</a></h1>
-        <h2>Un blog qu'il est bien pour le lire.</h2>
+        <h1><a href='./'>CF5.fr</a></h1>
+        <h2>Un blog rafraichissant sur les technologies du web.</h2>
     </header>
 
     <div id=sidebar>

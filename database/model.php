@@ -12,6 +12,12 @@ function execute($req,$params){
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+/** Récupère $limit posts d'une catégorie $category en partant du numéro $start,classés par date décroissante. */
+function get_post_by_slug($slug){
+    $req = "SELECT id FROM post WHERE slug= ?";
+    return execute($req, [$slug]);
+}
+
 /** Récupère un post à partir de son id.*/
 function get_post($id){
     $req = "SELECT id,title,content,date
