@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            body {
+                margin: auto;
+            }
+
+            .keyboard {
+                position:absolute;
+                top:50%;
+                left: 50%;
+                height:240px;
+                width: 235px;
+                margin:-120px 0 0 -118px;
+                display:table-cell;
+                vertical-align:middle;
+                line-height : 0;
+            }
+            .keyboard span {
+                font-family: arial, helvetica;
+                color : grey;
+                display : inline-block;
+                width: 12px;
+                height: 12px;
+                border : 1px solid gray;
+                border-radius: 3px;
+                margin: 1px;
+                padding: 0px;
+                line-height: 1px;
+                text-align: center;
+                vertical-align: bottom;
+                font-size: 13px;
+                overflow: hidden;
+                transition : 0.6s;
+                -webkit-transition : 0.6s;
+            }
+
+            .keyboard .fkey {
+                margin-bottom: 5px;
+            }
+
+            #f5, #ctrl, span:hover {
+                background : #ffc11c;
+                box-shadow:0 0 4px orange;
+                transition : none;
+                -webkit-transition : none;
+            }
+             #f5, #ctrl {
+                animation : glow 2s;
+                animation-iteration-count: infinite;
+                -webkit-animation : glow 2s;
+                -webkit-animation-iteration-count: infinite;
+             }
+
+            @keyframes glow
+            {
+                0% {
+                    box-shadow:0 0 1px orange;
+                    background: #ffcb32;
+                }
+                50% {
+                    box-shadow:0 0 15px orange;
+                    background: #ffc11c;
+                }
+                100% {
+                    box-shadow:0 0 1px orange;
+                    background: #ffcb32;
+                }
+            }
+            @-webkit-keyframes glow
+            {
+                0% {
+                    box-shadow:0 0 1px orange;
+                    background: #ffcb32;
+                }
+                50% {
+                    box-shadow:0 0 15px orange;
+                    background: #ffc11c;
+                }
+                100% {
+                    box-shadow:0 0 1px orange;
+                    background: #ffcb32;
+                }
+            }
+            h1 {
+                color: gray;
+                font-family: consolas;
+                text-align: center;
+                width: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="keyboard">
+            <span class=fkey style="margin-right:8px;"></span><span class=fkey></span><span class=fkey></span><span class=fkey></span><span class=fkey style="margin-right:8px;"></span><span class=fkey id=f5></span><span class=fkey></span><span class=fkey></span><span class=fkey style="margin-right:8px;"></span><span class=fkey></span><span class=fkey></span><span class=fkey></span><span class=fkey></span><br><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span style="width:16px"></span><br><span style="width:16px"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><br><span style="width:22px"></span><span></span><span></span><span></span><span>.</span><span></span><span></span><span>.</span><span></span><span></span><span></span><span></span><span style="width:22px"></span><br><span style="width:30px"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span style="width:30px"></span><br><span id=ctrl style="width:20px"></span><span></span><span></span><span style="width:120px"></span><span></span><span></span><span></span>
+            <br>
+            <h1>Soon...</h1>
+        </div>
+    </body>
+</html>

@@ -21,14 +21,10 @@ $authorized_pages = [
 ];
 
 //Si on a le paramètre page ET qu'elle fait partie des pages existantes...
-if (isset($_GET['page'])) {
-    if (array_key_exists($_GET['page'],$authorized_pages)) {
-        $page = $_GET['page'];
-    } elseif ($id = get_post_by_slug($_GET['page'])) {
-        $page = 'showpost';
-    }
-} else {
-   $page = 'showposts';
+if (isset($_GET['page']) && array_key_exists($_GET['page'],$authorized_pages)) {
+   $page = $_GET['page'];   // ... On utilise la page en question
+} else {                    // Sinon ...
+   $page = 'showposts';     // ... On utilise la page par défaut.
 }
 
 //Vérification du niveau d'habilitation
