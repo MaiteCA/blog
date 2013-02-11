@@ -8,6 +8,6 @@ foreach ($posts as $post) {?>
     </time>
     <h1><?=$post['title']?></h1>
     <?=$post['content'];?>
-    <footer><a href ="showpost-<?=$post['id'];?>">suite / commentaires (<?=$post['comments_count']?>)</a></footer>
+    <footer><a href ="<?=$post['id'];?>">suite / commentaires (<?=$post['comments_count']?>)</a></footer>
 </article>
 <?php }?>

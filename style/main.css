@@ -11,7 +11,8 @@ body{
     font-family: arial,helvetica,verdana,Geneva,Kalimati,sans-serif;
     font-size: 15px;
     padding : 0 10px 40px;
-    width:960px;
+    width:1000px;
+    max-width: 1000px;
     margin: 10px auto;
     color : #333;
     min-height : 960px;
@@ -46,7 +47,7 @@ article h3 {
 }
 
 header{
-    height: 200px;
+    height: 140px;
     padding: 20px 20px 0;
 }
 
@@ -133,20 +134,30 @@ input:focus, textarea:focus{
     padding-right : 12px;
 }
 
-.content{
-    width: 600px;
+article.content, #sidebar{
+    margin-top : 20px;
 }
 
 article.content{
     text-align: justify;
     -moz-hyphens: auto;
-    width: 540px;
+    width: 600px;
     hyphens: auto;
     margin-left : 80px
 }
 
-.comments {
+article>footer{
+    text-align: right;
+}
+
+#comments {
     margin-top : 20px;
+}
+
+#comments time {
+    font-size: 80%;
+    color: #666;
+    font-weight: normal;
 }
 
 #comment-form {
@@ -158,7 +169,7 @@ article.content{
 }
 
 #comment-form textarea, #post-form textarea{
-    width : 534px;
+    width : 594px; /*largeur de article -6 (2 padding + 1 border de chaque côté */
     padding : 2px;
 }
 
@@ -167,8 +178,9 @@ article.content{
     margin-left : -50px;
 }
 
-.comments article {
+#comments article {
     padding-left : 50px;
+    margin-bottom: 20px;
 }
 
 #post-form textarea{
@@ -179,7 +191,7 @@ article.content{
     width : 534px;
 }
 
-#post-form input[type=submit], #comment-form input[type=submit]{
+#post-form input[types=ubmit], #comment-form input[type=submit]{
     float: right ;
 }
 
@@ -192,7 +204,160 @@ article.content{
     background: #eef;
 }
 
+/** Code **/
+pre[class*="language-"] {
+    overflow-x: scroll;
+    padding: 10px;
+    position: relative;
+    width: 600px;
+    left : 0px;
+}
 
+pre[class*="language-"]:hover {
+    width: 680px;
+    left : -80px;
+}
+
+pre[title]:after{
+    font-family: calibri,verdana,Geneva,Kalimati,sans-serif;
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+
+pre[title]:after{
+    content:attr(title);
+}
+
+pre[title]:hover:after{
+  opacity: 0;
+}
+
+
+ /** Transitions */
+ #sidebar, article.content, body, pre[class*="language-"] {
+    transition : left 0.6s ease, width 0.6s ease, max-width 0.6s ease;
+    -webkit-transition : left 0.6s ease, width 0.6s ease, max-width 0.6s ease;
+ }
+
+ /** Responsive */
+ 
+ @media screen and (min-width: 1000px) {
+     time[datetime] {
+        width: 55px;
+        margin-left : -80px;
+        margin-right : 10px;
+        position: relative;
+        float: left;
+        height: 54px;
+        font-family: Verdana;
+        color: #333;
+        border-right : 2px solid #fafafa;
+        background-color: #fff;
+        padding: 4px;
+    }
+
+    .day, .month, .year {
+        position: absolute;
+    }
+
+    .day {
+        font-size: 30px;
+        top: 0px;
+    }
+
+    .month {
+        top: 30px;
+        left: 5px;
+        font-size: 18px;
+        color: #666;
+    }
+
+    .year {
+        top: 18px;
+        right: -16px;
+        font-size: 16px;
+        rotation: -90deg !important;
+        color : #999;
+        font-weight: bold;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+    }
+ } 
+
+@media screen and (max-width: 1280px) {
+    body {
+        width: 960px;
+    }
+    article.content{
+        width: 540px;
+    }
+    #comment-form textarea, #post-form textarea{
+        width : 534px; /*largeur de article -6 (2 padding + 1 border de chaque côté */
+    }
+    pre[class*="language-"] {
+        width: 540px;
+    }
+    pre[class*="language-"]:hover {
+        width: 620px;
+        left : -80px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    body {
+        width: 800px;
+    }
+    article.content{
+        width: 500px;
+        margin-left: 0;
+    }
+    #comment-form textarea, #post-form textarea{
+        width : 494px; /*largeur de article -6 (2 padding + 1 border de chaque côté */
+    }
+    pre[class*="language-"] {
+        width: 480px;
+    }
+    pre[class*="language-"]:hover {
+        width: 480px;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    
+    body {
+        width: auto;
+        max-width: 800px;
+    }
+    article.content{
+        width: auto;
+        max-width: 800px;
+        margin-left: 0;
+    }
+    #sidebar {
+        display : none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .keyboard {
+        display: none;
+    }
+    header h2 {
+        display: none;
+    }
+    header{
+        height: 80px;
+    }
+}
  /** Keyboard */
 
 .keyboard {
@@ -265,83 +430,4 @@ article.content{
         box-shadow:0 0 1px orange;
         background: #ffcb32;
     }
-}
-
-
-/** Date **/
-time {
-    width: 55px;
-    margin-left : -80px;
-    margin-right : 10px;
-    position: relative;
-    float: left;
-    height: 54px;
-    font-family: Verdana;
-    color: #333;
-    border-right : 2px solid #fafafa;
-    background-color: #fff;
-    padding: 4px;
-}
-
-.day, .month, .year {
-    position: absolute;
-}
-
-.day {
-    font-size: 30px;
-    top: 0px;
-}
-
-.month {
-    top: 30px;
-    left: 5px;
-    font-size: 18px;
-    color: #666;
-}
-
-.year {
-    top: 18px;
-    right: -16px;
-    font-size: 16px;
-    rotation: -90deg !important;
-    color : #999;
-    font-weight: bold;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-}
-
-/** Code **/
-pre, code {
-    overflow-x: scroll !important;
-    padding-top: 20px;
-    position: relative;
-    width: 514px;
-    left : 0px;
-    transition: width 0.5s ease, left 0.5s ease;
-}
-
-pre:hover {
-    width: 600px;
-    left : -86px;
-    transition: width 0.5s ease, left 0.5s ease;
-}
-
-pre[title]:after{
-    font-family: calibri,verdana,Geneva,Kalimati,sans-serif;
-    color: #333;
-    font-size: 1em;
-    font-weight: bold;
-    transition:  opacity 0.5s ease;
-    position: absolute;
-    right: 5px;
-    top: 0px;
-}
-
-pre[title]:after{
-    content:attr(title);
-}
-
-pre[title]:hover:after{
-  opacity: 0;
 }

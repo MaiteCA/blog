@@ -12,7 +12,7 @@
         <div class=g-plusone data-size=medium data-width=120 data-annotation=none></div>
         <script type="text/javascript">window.___gcfg = {lang: 'fr'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
     </div>
-    <section class='comments'>
+    <section id='comments'>
         <h1>commentaires</h1>
         <form action="addcomment" method="POST" id=comment-form>
             <input type=hidden name=id value=<?=$id?> />
@@ -25,7 +25,7 @@
             <article>
                 <img class=avatar src='http://www.gravatar.com/avatar/<?=$comment['avatar_hash']?>?s=40&d=identicon' />
                 <div>
-                    <b><?=$comment['name']?> :</b>
+                    <b><?=$comment['name']?> <time><?=$comment['date']?></time> :</b><br>
                     <?=$comment['content']?>
                 </div>
             </article>
