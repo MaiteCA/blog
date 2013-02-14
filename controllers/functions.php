@@ -45,6 +45,7 @@ function format($text) {
         '#\*([^\*]+)\*#' => '<b>$1</b>',
         '#\_([^\_]+)\_#' => '<i>$1</i>',
         '#\[(php|markup|css|javascript)\="(.+)"](.+)\[/\1\]#msU' => '<pre title="$2"><code class=language-$1>$3</code></pre>',
+        '#\[k\=(.+)\]#msU' => '<kbd>$1</kbd>',
         '#\[(php|markup|css|javascript)\](.+)\[/\1\]#msU' => '<pre><code class=language-$1>$2</code></pre>',
         '#\r\n\#\#(.+)\r\n#' => '<h3>$1</h3>',
         '#\r\n\#(.+)\r\n\r\n#' => '<h2>$1</h2>',
