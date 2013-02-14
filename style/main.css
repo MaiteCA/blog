@@ -129,6 +129,10 @@ input:focus, textarea:focus{
     padding: 0;
 }
 
+.links li {
+    margin-bottom: 6px;
+}
+
 .links a {
     background: url('data:image/gif;base64,R0lGODlhCAAHAPAAAAAAACBRZiH5BAEAAAAALAAAAAAIAAcAAAINhB15lx3wFGLzwWWdLAA7') center right no-repeat;
     padding-right : 12px;
@@ -401,8 +405,7 @@ pre[title]:hover:after{
     -webkit-animation-iteration-count: infinite;
  }
 
-@keyframes glow
-{
+@keyframes glow {
     0% {
         box-shadow:0 0 1px orange;
         background: #ffcb32;
@@ -416,8 +419,7 @@ pre[title]:hover:after{
         background: #ffcb32;
     }
 }
-@-webkit-keyframes glow
-{
+@-webkit-keyframes glow {
     0% {
         box-shadow:0 0 1px orange;
         background: #ffcb32;

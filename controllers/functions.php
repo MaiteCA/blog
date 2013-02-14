@@ -44,8 +44,8 @@ function format($text) {
     $replace   = [
         '#\*([^\*]+)\*#' => '<b>$1</b>',
         '#\_([^\_]+)\_#' => '<i>$1</i>',
-        '#\[(php|html|css|javascript)\="(.+)"](.+)\[/\1\]#ms' => '<pre title="$2"><code class=language-$1>$3</code></pre>',
-        '#\[(php|html|css|javascript)\](.+)\[/\1\]#ms' => '<pre><code class=language-$1>$2</code></pre>',
+        '#\[(php|markup|css|javascript)\="(.+)"](.+)\[/\1\]#msU' => '<pre title="$2"><code class=language-$1>$3</code></pre>',
+        '#\[(php|markup|css|javascript)\](.+)\[/\1\]#msU' => '<pre><code class=language-$1>$2</code></pre>',
         '#\r\n\#\#(.+)\r\n#' => '<h3>$1</h3>',
         '#\r\n\#(.+)\r\n\r\n#' => '<h2>$1</h2>',
         '#^\#(.+)\r\n\r\n#' => '<h2>$1</h2>',

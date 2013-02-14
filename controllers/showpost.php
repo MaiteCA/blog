@@ -5,6 +5,7 @@ if (!isset($id)) {
 
 $post = get_post($id);          //On récupère le post avec l'id
 format_post($post);             //On le met en forme.
+$page_title = $post['title']." sur CF5.fr";
 
 $comments = get_comments($id);  //On récupère les commentaires
 
