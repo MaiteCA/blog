@@ -13,6 +13,7 @@ require "controllers/functions.php";    //Les fonctions communes
 //Liste des pages autorisées, et niveau d'habilitation requis.
 $authorized_pages = [
     'showpost'   => 0,
+    'rss'        => 0,
     'showposts'  => 0,
     'addcomment' => 0,
     'addlink'    => 0,
